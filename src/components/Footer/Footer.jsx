@@ -11,9 +11,9 @@ const usefulLinks = [
 
 const serviceLinks = [
   { text: 'Dashboard', link: '#' },
-  { text: 'Student ProfilesStudent ProfilesStudent Profiles', link: '#' },
+  { text: 'Student Profiles', link: '#' },
   { text: 'Courses', link: '#' },
-  
+
 ];
 
 
@@ -40,7 +40,7 @@ function Footer() {
 
 
 
-        {/* useful links section */}
+        {/* Useful links section */}
         <section className='flex flex-col gap-4'>
           {/* heading section */}
           <div className='relative pb-[13px]'>
@@ -50,12 +50,15 @@ function Footer() {
           {/* quick links */}
           <div>
             <ul>
-              {usefulLinks.map((usefulLink,index) => (
+              {usefulLinks.map((usefulLink, index) => (
                 <li key={index} className='py-2'>
                   <a
                     href={usefulLink.link}
-                    className='text-[#aab0bf] text-[14px] font-bold hover:text-[#007bff] transition-colors duration-500  before:content-[""] before:p-[5px] before:mr-3 before:border before:border-[#aab0bf] before:inline-block hover:before:border-[#007bff] before:transition-colors before:duration-500'
-                  >{usefulLink.text.toUpperCase()}</a>
+                    className='text-[#aab0bf] text-[14px] font-bold hover:text-[#007bff] transition-colors duration-500 flex items-start gap-3 break-words'
+                  >
+                    <span className='w-[10px] h-[10px] border border-[#aab0bf] flex-shrink-0 hover:border-[#007bff] transition-colors duration-500 mt-[5px]'></span>
+                    <span className='leading-tight'>{usefulLink.text.toUpperCase()}</span>
+                  </a>
                 </li>
               ))}
             </ul>
@@ -74,18 +77,19 @@ function Footer() {
           {/* quick links */}
           <div>
             <ul>
-              {serviceLinks.map((serviceLink,index) => (
+              {serviceLinks.map((serviceLink, index) => (
                 <li key={index} className='py-2'>
-
                   <a
                     href={serviceLink.link}
-                    className='text-[#aab0bf] text-[14px] font-bold hover:text-[#007bff] transition-colors duration-500  before:content-[""] before:p-[5px] before:mr-3 before:border before:border-[#aab0bf] before:inline-block hover:before:border-[#007bff] before:transition-colors before:duration-500'
-                  >{serviceLink.text.toUpperCase()}</a>
+                    className='text-[#aab0bf] text-[14px] font-bold hover:text-[#007bff] transition-colors duration-500 flex items-start gap-3 break-words'
+                  >
+                    <span className='w-[10px] h-[10px] border border-[#aab0bf] flex-shrink-0 hover:border-[#007bff] transition-colors duration-500 mt-[5px]'></span>
+                    <span className='leading-tight'>{serviceLink.text.toUpperCase()}</span>
+                  </a>
                 </li>
               ))}
             </ul>
           </div>
-
         </section>
 
 
@@ -97,7 +101,7 @@ function Footer() {
           </div>
 
           {/* quick links */}
-          <div>
+          <div className='break-words whitespace-normal'>
 
             <h1 className='text-white text-[14px] font-bold py-2'>ADDRESS</h1>
             <p className='text-[#808080] font-[400] text-[18px]'>20,Nagercoil.</p>
